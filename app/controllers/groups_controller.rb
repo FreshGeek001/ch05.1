@@ -39,8 +39,7 @@ class GroupsController < ApplicationController
 
   def destroy
     @group.destroy
-    flash[:alert] = "Group deleted"
-    redirect_to groups_path
+    redirect_to groups_path, alert: "Group deleted"
   end
 
   def join
